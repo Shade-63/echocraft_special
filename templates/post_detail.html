@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                {% if post.img_url %}
+                <img src="{{ post.img_url }}"
+                    class="image-fluid"
+                    alt="{{ post.title }}" 
+                    style="max-height: 400px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body">
+                    <h1 class="card-title mb-3"> {{ post.title }} </h1>
+                    <div class="d-flex align-items-center mb-4">
+                        <span class="badge bg-primary me-2"> {{ post.category }} </span>
+                        <small class="text-muted">Posted by @{{ post.author.username }} </small>
+                    </div>
+
+                    <div class="post-content mb-4">
+                        {{ post.content|safe }}
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">
+                            ← Back to Feed
+                        </a>
+                        {% if current_user== post.author %}
+                        <form action="{{url_for('post_delete', post_id= post.id) }}" method="post">
+                            <button type="submit" class="btn btn-danger">Delete Post</button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .post-content {
+      white-space: pre-line; /* Preserves line breaks */
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+    }
+  </style>
+  {% endblock %}

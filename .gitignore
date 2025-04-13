@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+env/
+venv/
+.venv/
+ENV/
+
+# Database
+*.sqlite
+instance/
+instance/config.py
+instance/dev.db
+
+# Environment variables
+.env
+.env*
+!.env.example  # Keep template files
+secrets/
+.flaskenv
+
+# Cloudinary credentials
+cloudinary_config.json
+
+# Uploads and local files
+static/uploads/
+*.DS_Store
+
+# VS Code
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+
+!requirements.txt
+!Procfile

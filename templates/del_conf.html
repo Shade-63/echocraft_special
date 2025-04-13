@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body text-center p-4">
+          <h4 class="mb-4">🗑️ Delete Post?</h4>
+          <p class="mb-4">"{{ post.title }}" will be permanently removed.</p>
+          
+          <form method="POST" action="{{ url_for('delete_post', post_id=post.id) }}">
+            <div class="d-flex justify-content-center gap-3">
+              <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">
+                Cancel
+              </a>
+              <button type="submit" class="btn btn-danger">
+                Delete Forever
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    border-radius: 12px;
+    border: none;
+  }
+  .btn-danger {
+    background-color: #ff4757;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+  }
+</style>
+{% endblock %}
