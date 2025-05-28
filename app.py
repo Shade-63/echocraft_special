@@ -7,6 +7,8 @@ import cloudinary
 import cloudinary.uploader
 import os
 
+load_dotenv()
+
 def create_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
@@ -18,9 +20,9 @@ def create_app():
     login_manager.login_view = 'login'
 
     cloudinary.config(
-    cloud_name= "echocraft",
-    api_key= "111945726124917",
-    api_secret= "J0ZEBLtm_ulWqRWHiT5Mzz0wCDk",
+    cloud_name= os.getenv("CLOUDINARY_CLOUD_NAME"),
+    api_key= os.getenv("CLOUDINARY_API_KEY"),
+    api_secret= os.getenv("CLOUDINARY_API_SECRET"),
     )
 
 
