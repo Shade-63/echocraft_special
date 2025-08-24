@@ -1,0 +1,300 @@
+/* Muted Earth Theme for EchoCraft */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* CSS Variables for Muted Earth Theme */
+:root {
+  /* Primary Colors */
+  --sand-beige: #f5f1e8;
+  --soft-clay: #d4c4a8;
+  --eucalyptus-green: #7a918d;
+  --mist-gray: #9ba6b1;
+  
+  /* Accent Colors */
+  --desaturated-teal: #5a7c7a;
+  --olive: #6b7c3d;
+  
+  /* Typography */
+  --body-font: 'Inter', sans-serif;
+  --ui-font: 'Inter', sans-serif;
+  
+  /* Shadows and Borders */
+  --subtle-shadow: 0 2px 8px rgba(107, 166, 177, 0.08);
+  --paper-border: 1px solid #e8e0d0;
+  --focus-border: 2px solid var(--desaturated-teal);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--sand-beige);
+  font-family: var(--body-font);
+  color: #4a4a4a;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ui-font);
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+/* Cards - Grounded Earth Effect */
+.card {
+  background-color: #fefefe;
+  border: var(--paper-border);
+  border-radius: 12px;
+  box-shadow: var(--subtle-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(107, 166, 177, 0.12);
+  transform: translateY(-2px);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Form Elements */
+.form-control, .form-select {
+  font-family: var(--ui-font);
+  background-color: #fefefe;
+  border: var(--paper-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #4a4a4a;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--desaturated-teal);
+  box-shadow: 0 0 0 3px rgba(90, 124, 122, 0.1);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: var(--mist-gray);
+  font-style: normal;
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--ui-font);
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--desaturated-teal);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #4a6a68;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(90, 124, 122, 0.3);
+}
+
+.btn-outline-primary {
+  color: var(--desaturated-teal);
+  border-color: var(--desaturated-teal);
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--desaturated-teal);
+  color: #ffffff;
+}
+
+.btn-outline-danger {
+  color: #c44569;
+  border-color: #c44569;
+}
+
+.btn-outline-danger:hover {
+  background-color: #c44569;
+  color: #ffffff;
+}
+
+.btn-danger {
+  background-color: #c44569;
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #a83a5a;
+}
+
+.btn-outline-secondary {
+  color: var(--eucalyptus-green);
+  border-color: var(--eucalyptus-green);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--eucalyptus-green);
+  color: #ffffff;
+}
+
+/* Navigation and Header */
+.navbar {
+  background-color: #fefefe;
+  border-bottom: var(--paper-border);
+  box-shadow: var(--subtle-shadow);
+}
+
+/* Badges */
+.badge {
+  font-family: var(--ui-font);
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.badge.bg-primary {
+  background-color: var(--desaturated-teal) !important;
+}
+
+/* Alerts */
+.alert {
+  border: var(--paper-border);
+  border-radius: 8px;
+  font-family: var(--ui-font);
+}
+
+.alert-success {
+  background-color: #e8f5e8;
+  border-color: #d4e8d4;
+  color: #2d5a2d;
+}
+
+.alert-danger {
+  background-color: #f8e8e8;
+  border-color: #f0d0d0;
+  color: #8b3d3d;
+}
+
+/* Post Cards Specific Styling */
+.post-image {
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.card-title {
+  font-family: var(--ui-font);
+  font-weight: 600;
+  color: #3a3a3a;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-family: var(--body-font);
+  color: var(--eucalyptus-green);
+  font-size: 0.95rem;
+}
+
+/* Reaction Buttons */
+.reaction-btn {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  margin: 2px;
+}
+
+/* Image Preview */
+#image-preview {
+  border: 2px dashed var(--soft-clay);
+  border-radius: 8px;
+  padding: 15px;
+  background-color: var(--sand-beige);
+}
+
+/* Container and Spacing */
+.container {
+  max-width: 1200px;
+}
+
+.py-4, .py-5 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Text Colors */
+.text-muted {
+  color: var(--mist-gray) !important;
+}
+
+.text-dark {
+  color: #3a3a3a !important;
+}
+
+/* Links */
+a {
+  color: var(--desaturated-teal);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4a6a68;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sand-beige);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--soft-clay);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--eucalyptus-green);
+}
+
+/* Focus States */
+*:focus {
+  outline: 2px solid var(--desaturated-teal);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Loading States */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Post Content Styling */
+.post-content {
+  white-space: pre-line; /* Preserves line breaks */
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-family: var(--body-font);
+  color: #4a4a4a;
+}
+
+/* Animation for smooth transitions */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+} 
